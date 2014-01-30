@@ -26,9 +26,9 @@ $(document).ready(function(){
  	$(document).on('click', '#map', function(e){
  		var coordinates = getCoordinates(e);
  		var newPin = makePinElement(coordinates);
+ 		$(this).closest('.container').append(newPin);
  	});
- 	$(document).on('click','.pin', function(e){
+ 	$(document).on('click', '.pin', function(e){
  		$(this).remove();
  	});
-
 });
